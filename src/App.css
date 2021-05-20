@@ -1,9 +1,106 @@
-.App {
+* {
+
+    overflow-x: hidden;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+
+    background-image: url("./background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+
+.App-Container {
+    padding: 55px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+      
+}
+
+.App-ContainerInicio {
+    
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.App-ContainerLogo {
+  
+  flex: 70%;
+  height: 500px;
+  padding: 195px;
+  overflow: hidden ;
+  
+}
+
+.App-ContainerForm {
+  background: white;
+  padding: 25px;
+  padding-top: 30px;
+  flex: 30%;
+  flex-direction: column;
   text-align: center;
+  overflow-x: hidden;
+}
+
+.AppContainerWriteTodo {
+
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.AppContainerWriteTodo1 {
+  flex: 80%
+}
+
+.AppContainerWriteTodo2 {
+  flex: auto
+}
+
+.AppContainerWriteTodo2 button {
+  margin-left: 15px;
+  width: 150px;
+  height: 55px;
+}
+
+.App-FormText {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: black;
+}
+
+.App-Btn {
+
+    background-color: blue;
+    color: white;
+    border-radius: 13px;
+    border: 0px ;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 5px 33px;
+    text-decoration: none;
+    
+}
+
+.App-InitialPage {
+  background-color: #282c34;
+  
 }
 
 .App-logo {
-  height: 40vmin;
+
+  width: 200px;
+  height: auto;
   pointer-events: none;
 }
 
@@ -35,4 +132,48 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+@media screen and (max-width: 1280px)
+{
+
+  .App-Container {
+  
+    flex-direction: column;
+      
+  }
+
+  .App-ContainerLogo {
+    
+    flex: 100%;
+    height: 200px;
+    text-align: center;
+    padding: 75px;
+    
+  }
+
+  .App-ContainerForm {
+    background: white;
+    padding: 25px;
+    padding-top: 30px;
+    flex: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+}
+
+@media screen and (max-width: 768px)
+{
+
+  .App-ContainerLogo img {
+    
+    width: 150px;
+    height: 150px;
+    
+    
+  }
+
+
 }

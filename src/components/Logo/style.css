@@ -1,0 +1,13 @@
+.background {
+    background-color: blue;
+    background-image: url("../../background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.App-logo {
+
+    width: 200px;
+    height: auto;
+    pointer-events: none;
+  }

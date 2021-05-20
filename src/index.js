@@ -1,17 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+//import App from './App';
+import Logar from './Logar';
+import Inicio from './Inicio';
+import TodoList from './TodoList';
+
+import { AuthProvider } from './auth/AuthContext';
+
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
+import { RotaPrivada } from './auth/RotaPrivada'
+import { Cadastrar } from './Cadastrar';
+import changePhotoProfile  from './TrocaFoto';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+<AuthProvider>
+    <BrowserRouter>
+        <Switch>
+            <RotaPrivada exact path="/" component={Inicio} /> {/* Home */}
+            <RotaPrivada path="/todolist" component={TodoList} />
+            <RotaPrivada path="/changePhoto" component={changePhotoProfile}/>
+            <Route path="/cadastrar" component={Cadastrar} /> {/* cadastrar */}
+            <Route path="/login" component={Logar} />
+        </Switch>
+    </BrowserRouter>
+</AuthProvider>,
+document.getElementById('root'));

@@ -1,0 +1,23 @@
+.App-ContainerArea{
+    
+    padding: 15px;
+    background-color: white;
+    flex: 75%;
+    height: 100vh;
+}
+
+.title {
+    font-size: 18px;
+    color: red;
+    font-weight: 600;
+}
+
+.photo {
+    text-align: center;
+}
+
+.photo img {
+    text-align: center;
+    width: 100px;
+    height: auto;
+}
